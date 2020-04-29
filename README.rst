@@ -66,30 +66,33 @@ sales, purchases, profits or loss compared to previous month/year.
 
 
 4. New Records Page
---------------------------------
+==========
 This is the page where you can add the new data of the shop. You will get the
 options of all the entries in which the data can be inserted. Clicking on the 
 any of the options will take you to the 'add records' page of that entry, where
 you can add the new data, modify it or delete it.
-------------------
+
+
 5. Search Customer Page
-----------------
+=============
 Clicking on 'Search Customer' tab on the home page takes you to the search form
 where you can search the customers using their name or phone number. You can type in 
 some pattern and the app will fetch the results which are similar to those patterns.
 There is a 'New' and 'Update' tab on this page which takes you to the 'add records/change records'
 page of customers.
-----
+
+
 6. Search Products Page
----------------------
+===========
 Clicking on 'Search Products' tab on the home page takes you to the search form
 where you can search the products using their name. You can type in 
 some pattern and the app will fetch the results which are similar to those patterns.
 There is a 'New' and 'Update' tab on this page which takes you to the 'add records/change records'
 page of products.
-----
+
+
 7. Search Distributor Page
------------------
+=========
 Clicking on 'Search Distributor' tab on the home page takes you to the search form
 where you can search the distributors using their name or phone number. You can type in 
 some pattern and the app will fetch the results which are similar to those patterns.
