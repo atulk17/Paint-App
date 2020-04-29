@@ -51,9 +51,9 @@ User Manual
 -------
 On this page you get the options to view all the data stored in 
 the database. These are all the old data of your shop.
-----------------------
+-------------------------------------------------------------------------------------
 3. Analysis
-----------------------
+---------------------------------------------------------------------------------------
 This page gives you the options to view your sales, purchases, office expenses
 and profit or loss on a monthly or yearly basis in graphical form.
 There is a NOTE button on the bottom of each graph which shows you the change in 
