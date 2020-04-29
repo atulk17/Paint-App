@@ -25,14 +25,17 @@ Quick start
 
 4. Start the development server and visit http://127.0.0.1:8000/
 
+
 User Names and Passwords
 -----------------------
 1. admin -> admin12345
 2. a -> a
 
-============
+
+
 User Manual
 ============
+
 1. Home Page
 ------------
 * Here you have three options at the top. 
@@ -46,19 +49,22 @@ User Manual
     4. Search Product
     5. Search Distributor
     6. Track Delivery
-==============
+    
+    
 2. Shop Records Page
 ===============
 On this page you get the options to view all the data stored in 
 the database. These are all the old data of your shop.
-============
+
+
 3. Analysis
 ==============
 This page gives you the options to view your sales, purchases, office expenses
 and profit or loss on a monthly or yearly basis in graphical form.
 There is a NOTE button on the bottom of each graph which shows you the change in 
 sales, purchases, profits or loss compared to previous month/year.
--------------------------
+
+
 4. New Records Page
 --------------------------------
 This is the page where you can add the new data of the shop. You will get the
