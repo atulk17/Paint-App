@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-group button {
+      background-color: rgb(255, 255, 255);
+      border: 5px solid rgb(0, 0, 0);
+      color: rgb(0, 0, 0); 
+      padding: 5px 5px; 
+      text-transform:uppercase;
+      text-align: center;
+      cursor: pointer; 
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      white-space: nowrap;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     }
+    
+    
+    .btn-group button:hover {
+      background-color: #b6b6b6;
+    }
+        table {
+            top: 20%;
+            left: 10%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        td, th {
+            border: 1px solid #7a7a7a;
+            text-align: left;
+            padding: 8px;
+        }
+        tr {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="btn-group">
+          <a href="{% url 'home' %}" target="_top"><button style="position: absolute; right:1%; top:1px"><b>Home</b></button></a>
+          <a href="{% url 'home' %}" target="_top"><button style="position: absolute; left:1%; top:1px"><b>Back</b></button></a>
+        </div>
+    </nav>
+    <h1 style="text-align: center; font:700">Details</h1>
+    <table style="position: absolute; " >
+        <tr style="border: 5px;">
+            <th>Customer ID</th>
+            <th>Invoice No</th>
+            <th>Customer Name</th> 
+            <th>Total Amount</th>
+            <th>Date Of Order</th>
+            <th>Status</th>
+        </tr>
+        {% for item in del %}
+        <tr> 
+            <td>{{ item.Customer_id }}</td>
+            <td>{{ item.Invoice_no}}</td>
+            <td>{{ item.Customer_name }}</td>        
+            <td>{{ item.Total_amount }}</td>        
+            <td>{{ item.Date_of_order }}</td>
+            <td><a style="text-decoration: none; color:black" href="http://127.0.0.1:8000/admin/paint/delivers/?Delivery_status__exact=NOT+DELIVERED" >{{item.Delivery_status}}</a> </td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(245, 243, 243);" >
+    <style>
+        .btn-group button {
+      background-color: rgb(255, 255, 255);
+      border: 5px solid rgb(0, 0, 0);
+      color: rgb(0, 0, 0); 
+      padding: 5px 5px; 
+      text-transform:uppercase;
+      text-align: center;
+      cursor: pointer; 
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      white-space: nowrap;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     }
+    
+    
+    .btn-group button:hover {
+      background-color: #b6b6b6;
+    }
+        table {
+            top: 20%;
+            left: 10%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        td, th {
+            border: 1px solid #7a7a7a;
+            text-align: left;
+            padding: 8px;
+        }
+        tr {
+            background-color: #dddddd;
+        }
+        .icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  
+}
+
+.icon-bar a {
+  display: block;
+  border-radius :10px;
+  border-top: 20px;
+  border-color: aliceblue;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #000;
+}
+
+.icon-bar a:hover {
+  background-color: rgb(100, 100, 100);
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+    </style>
+    <div class="icon-bar">
+        <a href="http://127.0.0.1:8000/admin/paint/distributor/add/" >New</a> 
+        <a href="http://127.0.0.1:8000/admin/paint/distributor/" >Update</a> 
+    </div>
+    <nav>
+        <div class="btn-group">
+          <a href="{% url 'home' %}" target="_top"><button style="position: absolute; right:1%; top:1px"><b>Home</b></button></a>
+          <a href="{% url 'home' %}" target="_top"><button style="position: absolute; left:1%; top:1px"><b>Back</b></button></a>
+        </div>
+    </nav>
+    {% block content %}
+    <h1 style="position:absolute; top:1%; left:45%; font-size:50px">Search</h2>
+    <form style= "font-size:30; position :absolute;top:20% ; left:40%" method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Search</button>
+    </form>
+    <table style= "font-size:30; position :absolute; top:280px">
+        <tr style="border: 5px;">
+            <th>Distributor ID</th>
+            <th>Distributor Name</th> 
+            <th>GSTIN</th>
+            <th>Address</th>
+            <th>Email ID</th>
+            <th>Contact No</th>
+        </tr>
+        {% for item in dist %}
+        <tr> 
+            <td>{{ item.Distributor_id }}</td>
+            <td>{{ item.Distributor_name }}</td>        
+            <td>{{ item.GSTIN }}</td>        
+            <td>{{ item.Address }}</td>
+            <td>{{ item.Email_id }}</td>
+            <td>{{ item.Contact_no }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+</body>
+</html>

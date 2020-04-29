@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-group button {
+      background-color: rgb(255, 255, 255);
+      border: 5px solid rgb(0, 0, 0);
+      color: rgb(0, 0, 0); 
+      padding: 5px 5px; 
+      text-transform:uppercase;
+      text-align: center;
+      cursor: pointer; 
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      white-space: nowrap;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     }
+    
+    
+    .btn-group button:hover {
+      background-color: #b6b6b6;
+    }
+        table {
+            top: 20%;
+            left: 10%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        td, th {
+            border: 1px solid #7a7a7a;
+            text-align: left;
+            padding: 8px;
+        }
+        tr {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="btn-group">
+          <a href="{% url 'home' %}" target="_top"><button style="position: absolute; right:1%; top:1px"><b>Home</b></button></a>
+          <a href="{% url 'search-distributor' %}" target="_top"><button style="position: absolute; left:1%; top:1px"><b>Back</b></button></a>
+        </div>
+    </nav>
+    <h1 style="text-align: center; font:700">Details</h1>
+    <table style="position: absolute;">
+        <tr style="border: 5px;">
+            <th>Distributor ID</th>
+            <th>Distributor Name</th> 
+            <th>GSTIN</th>
+            <th>Address</th>
+            <th>Email ID</th>
+            <th>Contact No</th>
+        </tr>
+        {% for item in distributor %}
+        <tr> 
+            <td>{{ item.Distributor_id }}</td>
+            <td>{{ item.Distributor_name }}</td>        
+            <td>{{ item.GSTIN }}</td>        
+            <td>{{ item.Address }}</td>
+            <td>{{ item.Email_id }}</td>
+            <td>{{ item.Contact_no }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

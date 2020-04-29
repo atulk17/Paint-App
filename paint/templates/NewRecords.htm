@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Records</title>
+</head>
+<body style="background-color:rgb(245, 243, 243);">
+
+  <img STYLE="position:absolute; top:10px; left:10px; width:400px; height:200px" title="Amrutaa Threads" src="{% static "/Amrutaalogo.jpg" %}" alt="Logo">
+  <h2 style="position:absolute; top:100px; left:700px; font-size:50px">Add Records</h2>
+  <style>
+    .bt button {
+      background-color: rgb(255, 255, 255);
+      border: 5px solid rgb(0, 0, 0);
+      color: rgb(0, 0, 0); 
+      padding: 5px 5px; 
+      text-transform:uppercase;
+      text-align: center;
+      cursor: pointer; 
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      white-space: nowrap;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     }
+    
+    
+    .bt button:hover {
+      background-color: #b6b6b6;
+    }
+    .btn-group button {
+      background-color: rgb(255, 255, 255); /* Green background */
+      border: 5px solid rgb(0, 0, 0); /* Green border */
+      color: rgb(0, 0, 0); /* White text */
+      padding: 20px 210px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      text-decoration: none;
+      display: block; /* Make the buttons appear below each other */
+      font-size: 25px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align:center;
+      border-radius: 35px;
+      white-space: nowrap;
+     }
+    
+    /* Add a background color on hover */
+    .btn-group button:hover {
+      background-color: #9e9e9e;
+    }
+</style>
+<div class="bt">  
+  <a href="{% url 'home' %}" target="_top"><button style="position: absolute; right:1%; top:1px"><b>Home</b></button></a>
+  </div>
+  <div class="btn-group">
+    <a href="http://127.0.0.1:8000/admin/paint/employee/add/" target="_top"><button style="position: absolute; left:100px; top:250px"><b>Employee</b></button></button></a>
+    <a href="http://127.0.0.1:8000/admin/paint/products/add/" target="_top"><button style="position: absolute; left:100px; top:400px"><b>Product</b></button></a>
+    <a href="http://127.0.0.1:8000/admin/paint/purchase/add/" target="_top"><button style="position: absolute; left:100px; top:550px"><b>Purchases</b></button></a>
+    <a href="http://127.0.0.1:8000/admin/paint/distributor/add/" target="_top"><button style="position: absolute; left:800px; top:250px"><b>Distributor</b></button></a>
+    <a href="http://127.0.0.1:8000/admin/paint/customers/add/" target="_top"><button style="position: absolute; left:800px; top:400px"><b>New Customer</b></button></a>
+    <a href="http://127.0.0.1:8000/admin/paint/transport/add/" target="_top"><button style="position: absolute; left:800px; top:550px"><b>Transport</b></button></a>
+    <a href="http://127.0.0.1:8000/admin/paint/office_expense/add/" target="_top"><button style="position: absolute; left:100px; top:700px"><b>Office Expenses</b></button></a>
+    <a href="http://127.0.0.1:8000/admin/paint/sales/add/" target="_top"><button style="position: absolute; left:800px; top:700px"><b>Sales</b></button></a>
+  </div>
+    
+
+
+</body>
+</html>
